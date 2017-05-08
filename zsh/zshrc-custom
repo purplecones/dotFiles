@@ -1,0 +1,21 @@
+# env
+export EDITOR=vim
+
+# aliases
+## git
+alias g='git'
+alias gs='git status'
+alias ga='git add'
+alias gc='git commit'
+
+## yarn
+alias y='yarn'
+alias ys='yarn start'
+alias yd='yarn dev'
+
+## npm
+alias n='npm'
+
+## serverless
+alias s='serverless'
+
