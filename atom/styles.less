@@ -1,0 +1,19 @@
+// active pane
+.pane {
+  .gutter,
+  ul.tab-bar, .editor {
+    opacity: 0.4;
+  }
+}
+.pane.active {
+  .gutter, .editor {
+    opacity: 1;
+  }
+  ul.tab-bar {
+    opacity: 1;
+    .tab.active {
+      color: #e98c29;
+      font-weight: bold;
+    }
+  }
+}

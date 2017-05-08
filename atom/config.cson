@@ -1,0 +1,34 @@
+"*":
+  "advanced-open-file":
+    createDirectories: true
+    fuzzyMatch: true
+  core:
+    audioBeep: false
+    telemetryConsent: "no"
+    themes: [
+      "one-dark-ui"
+      "atom-dark-syntax"
+    ]
+    titleBar: "custom"
+  editor:
+    showIndentGuide: true
+    showInvisibles: true
+    softTabs: false
+    softWrap: true
+    tabType: "soft"
+  "exception-reporting":
+    userId: "4b628db4-49fe-71ae-5a43-9bb697b639e9"
+  "language-babel":
+    autoIndentJSX: true
+  "one-dark-ui":
+    layoutMode: "Compact"
+    tabSizing: "Even"
+  "package-sync":
+    createOnChange: true
+    forceOverwrite: true
+  react:
+    enabledForAllJavascriptFiles: true
+  "vim-mode-plus":
+    clearMultipleCursorsOnEscapeInsertMode: true
+  welcome:
+    showOnStartup: false

@@ -1,0 +1,13 @@
+packages: [
+  "advanced-open-file"
+  "emmet"
+  "file-icons"
+  "git-plus"
+  "linter"
+  "linter-eslint"
+  "open-this"
+  "react-snippets"
+  "vim-mode-plus"
+  "vim-mode-plus-ex-mode"
+  "vim-mode-plus-move-selected-text"
+]
