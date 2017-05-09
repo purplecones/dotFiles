@@ -1,6 +1,16 @@
 ## Configuration
 
-Run `setup.sh` file which will configure the correct symlinks.
+### Symlinks
+
+Run `symlinks.sh` to configure symlinks
+
+### brew
+
+Run `brew.sh` to install specified list of apps via brew
+
+### npm
+
+Run `npm.sh` to globally install specified list of apps via npm
 
 ### Atom
 
