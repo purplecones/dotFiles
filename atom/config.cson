@@ -5,10 +5,6 @@
   core:
     audioBeep: false
     telemetryConsent: "no"
-    themes: [
-      "one-dark-ui"
-      "atom-dark-syntax"
-    ]
     titleBar: "custom"
   editor:
     showIndentGuide: true

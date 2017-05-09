@@ -64,7 +64,7 @@ module.exports = {
     env: {},
 
     // set to false for no bell
-    bell: 'SOUND',
+    bell: false,
 
     // if true, selected text will automatically be copied to the clipboard
     copyOnSelect: false
@@ -82,10 +82,11 @@ module.exports = {
   //   `@company/project`
   //   `project#1.0.1`
   plugins: [
-    // 'hyperterm-cobalt2-theme',
-    // 'hyperlinks',
-    // 'hyperterm-cursor',
-    // 'hyperterm-paste'
+    'hyper-blink',
+    'hypercwd',
+    'hyperlinks',
+    'hyperterm-cursor',
+    'hyperterm-paste'
   ],
 
   // in development, you can create a directory under
