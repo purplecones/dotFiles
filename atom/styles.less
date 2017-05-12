@@ -1,4 +1,40 @@
-// active pane
+@dark-color: #000;
+@dark-color-highlight: #232323;
+
+// black background theme
+atom-text-editor {
+  background: none;
+
+  .gutter {
+    background: none;
+  }
+}
+atom-pane {
+  background: @dark-color;
+}
+.tree-view {
+  background: @dark-color;
+}
+.title-bar {
+  background: @dark-color;
+}
+.tab-bar {
+  background: none;
+
+  .tab .title {
+    background: none;
+  }
+}
+.tab-bar .tab.active[data-type$="Editor"] {
+  background: @dark-color-highlight;
+  color: #e98c29;
+  font-weight: bold;
+  .title {
+    background: @dark-color-highlight;
+  }
+}
+
+// when splitting screens, this makes it easy to identify which pane is active
 .pane {
   .gutter,
   ul.tab-bar, .editor {
@@ -7,13 +43,14 @@
 }
 .pane.active {
   .gutter, .editor {
-    opacity: 1;
+    opacity: 1
   }
   ul.tab-bar {
     opacity: 1;
-    .tab.active {
-      color: #e98c29;
-      font-weight: bold;
-    }
   }
+}
+
+// but border around atom to match hyper
+atom-workspace {
+  border: 1px solid rgb(51, 51, 51);
 }

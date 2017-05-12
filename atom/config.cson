@@ -5,6 +5,10 @@
   core:
     audioBeep: false
     telemetryConsent: "no"
+    themes: [
+      "one-dark-ui"
+      "an-old-hope-syntax"
+    ]
     titleBar: "custom"
   editor:
     showIndentGuide: true
@@ -24,6 +28,8 @@
     forceOverwrite: true
   react:
     enabledForAllJavascriptFiles: true
+  "tree-view":
+    squashDirectoryNames: true
   "vim-mode-plus":
     clearMultipleCursorsOnEscapeInsertMode: true
   welcome:

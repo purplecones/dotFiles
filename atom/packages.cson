@@ -1,6 +1,8 @@
 packages: [
   "advanced-open-file"
+  "an-old-hope-syntax"
   "busy-signal"
+  "double-tag"
   "emmet"
   "file-icons"
   "git-plus"
@@ -10,6 +12,8 @@ packages: [
   "linter-ui-default"
   "open-this"
   "package-sync"
+  "prettier-atom"
+  "react-es6-snippets"
   "react-snippets"
   "vim-mode-plus"
   "vim-mode-plus-ex-mode"

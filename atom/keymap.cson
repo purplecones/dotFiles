@@ -1,6 +1,7 @@
 'atom-text-editor.vim-mode-plus.normal-mode':
   'g f': 'open-this:here'
 
+
   ':': 'vim-mode-plus-ex-mode:open'
   '!': 'vim-mode-plus-ex-mode:toggle-setting'
 
@@ -14,3 +15,6 @@
   'ctrl-j': 'vim-mode-plus-user:move-selected-text-down'
   'ctrl-h': 'vim-mode-plus-user:move-selected-text-left'
   'ctrl-l': 'vim-mode-plus-user:move-selected-text-right'
+
+'atom-text-editor':
+  'ctrl-\\': 'tree-view:toggle'
