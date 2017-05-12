@@ -284,3 +284,6 @@ vmap <expr> <C-h> DVB_Drag('left')
 vmap <expr> <C-l> DVB_Drag('right')
 vmap <expr> <C-j> DVB_Drag('down')
 vmap <expr> <C-k> DVB_Drag('up')
+
+" scrooloose/nerdtree : toggle tree
+map <C-\> :NERDTreeToggle<CR>
