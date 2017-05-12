@@ -269,6 +269,18 @@ au BufRead,BufNewFile *.go set ft=go syntax=go
 " Vundle
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
+  Plugin 'VundleVim/Vundle.vim'
 	source ~/.vim-plugins
 call vundle#end()
 " bind-key -n C-S-Right resize-pane -R 25
+
+let g:move_key_modifier = 'C'
+
+" mxw/vim-jsx : syntax highlighting for .js files
+let g:jsx_ext_required = 0
+
+" shinokada/dragvisuals.vim : move text blocks with Control and h, j, k, l
+vmap <expr> <C-h> DVB_Drag('left')
+vmap <expr> <C-l> DVB_Drag('right')
+vmap <expr> <C-j> DVB_Drag('down')
+vmap <expr> <C-k> DVB_Drag('up')
