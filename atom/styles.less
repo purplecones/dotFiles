@@ -1,5 +1,14 @@
-@dark-color: #000;
-@dark-color-highlight: #232323;
+@primary-color: #000;
+// @primary-color: #FFF;
+@primary-color-highlight: #232323;
+// @primary-color-highlight: #f4f4f4;
+
+html {
+  background-color: @primary-color;
+}
+atom-workspace {
+  border-radius: 5px;
+}
 
 // black background theme
 atom-text-editor {
@@ -9,14 +18,27 @@ atom-text-editor {
     background: none;
   }
 }
+
+// hide tree view title
+body > atom-workspace > atom-workspace-axis > atom-panel-container.left > atom-dock > div > div.atom-dock-mask > div > atom-pane-container > atom-pane > ul {
+  display: none;
+}
+
+.list-group .selected::before, .list-tree .selected::before {
+  background: @primary-color-highlight;
+}
 atom-pane {
-  background: @dark-color;
+  background: @primary-color;
+
+  .texteditor.tab {
+    background: @primary-color;
+  }
 }
 .tree-view {
-  background: @dark-color;
+  background: @primary-color;
 }
 .title-bar {
-  background: @dark-color;
+  background: @primary-color;
 }
 .tab-bar {
   background: none;
@@ -26,11 +48,11 @@ atom-pane {
   }
 }
 .tab-bar .tab.active[data-type$="Editor"] {
-  background: @dark-color-highlight;
+  background: @primary-color-highlight;
   color: #e98c29;
   font-weight: bold;
   .title {
-    background: @dark-color-highlight;
+    background: @primary-color-highlight;
   }
 }
 
@@ -41,7 +63,7 @@ atom-pane {
     opacity: 0.4;
   }
 }
-.pane.active {
+.pane.active, .pane:only-child {
   .gutter, .editor {
     opacity: 1
   }
@@ -49,7 +71,9 @@ atom-pane {
     opacity: 1;
   }
 }
-
+.status-bar {
+  background-color: @primary-color;
+}
 // but border around atom to match hyper
 atom-workspace {
   border: 1px solid rgb(51, 51, 51);

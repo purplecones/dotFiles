@@ -2,15 +2,16 @@
   "advanced-open-file":
     createDirectories: true
     fuzzyMatch: true
+  "atom-clock":
+    dateFormat: "h:mm a"
   core:
     audioBeep: false
     telemetryConsent: "no"
-    themes: [
-      "one-dark-ui"
-      "an-old-hope-syntax"
-    ]
     titleBar: "custom"
+  docblockr:
+    deep_indent: true
   editor:
+    invisibles: {}
     showIndentGuide: true
     showInvisibles: true
     softTabs: false
@@ -18,19 +19,27 @@
     tabType: "soft"
   "exception-reporting":
     userId: "4b628db4-49fe-71ae-5a43-9bb697b639e9"
-  "language-babel":
-    autoIndentJSX: true
+  "language-babel": {}
+  "linter-ui-default":
+    panelHeight: 69
   "one-dark-ui":
-    layoutMode: "Compact"
     tabSizing: "Even"
   "package-sync":
     createOnChange: true
     forceOverwrite: true
+  "prettier-atom":
+    formatOnSaveOptions:
+      showInStatusBar: true
+    prettierOptions:
+      singleQuote: true
+      trailingComma: "all"
   react:
     enabledForAllJavascriptFiles: true
   "tree-view":
     squashDirectoryNames: true
   "vim-mode-plus":
     clearMultipleCursorsOnEscapeInsertMode: true
+  "vim-mode-plus-ex-mode":
+    notifiedUseExMode: true
   welcome:
     showOnStartup: false

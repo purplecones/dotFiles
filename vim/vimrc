@@ -41,7 +41,7 @@ set tags=./.git/tags
 " Ignore case when searching
 set ignorecase
 
-" When searching try to be smart about cases 
+" When searching try to be smart about cases
 set smartcase
 
 " Makes search act like search in modern browsers
@@ -54,7 +54,7 @@ set incsearch
 set expandtab
 
 " Be smart when using tabs
-set	smarttab		
+set	smarttab
 
 " 1 Tab == 4spaces
 set tabstop=2
@@ -108,9 +108,9 @@ nmap <Leader>t :Ag \(TODO\\|FIXME\) themes/<CR>
 " Find/Edit/Buffers Shortcuts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 noremap <Leader>f :find
-noremap <Leader>e :edit 
+noremap <Leader>e :edit
 noremap <Leader>B :buffers<CR>
-noremap <Leader>b :buffer 
+noremap <Leader>b :buffer
 
 " Insert Line Above/Below
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -209,7 +209,7 @@ noremap <F2> :set invpaste paste?<CR>
 noremap <F3> :set nonumber!<CR>
 
 " Add CSS closing comment
-noremap <F4>  %^y$%a// 
+noremap <F4>  %^y$%a//
 " bind-key -n C-S-Up resize-pane -U 15
 " bind-key -n C-S-Down resize-pane -D 15
 " source current file
@@ -287,3 +287,16 @@ vmap <expr> <C-k> DVB_Drag('up')
 
 " scrooloose/nerdtree : toggle tree
 map <C-\> :NERDTreeToggle<CR>
+
+" split movements
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" highlight active pane
+let g:diminactive_use_colorcolumn = 0
+let g:diminactive_use_syntax = 1
+let g:diminactive_enable_focus = 1
+
+set autoread
