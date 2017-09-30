@@ -5,9 +5,7 @@
 
 html {
   background-color: @primary-color;
-}
-atom-workspace {
-  border-radius: 5px;
+  border: 1px solid @primary-color-highlight;
 }
 
 // black background theme
@@ -62,6 +60,9 @@ atom-pane {
   ul.tab-bar, .editor {
     opacity: 0.4;
   }
+  .wrap-guide {
+    display: none !important;
+  }
 }
 .pane.active, .pane:only-child {
   .gutter, .editor {
@@ -76,5 +77,6 @@ atom-pane {
 }
 // but border around atom to match hyper
 atom-workspace {
-  border: 1px solid rgb(51, 51, 51);
+  // border: 1px solid rgb(51, 51, 51);
+  border: 0;
 }

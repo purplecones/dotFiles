@@ -1,27 +1,45 @@
 "*":
   "advanced-open-file":
     createDirectories: true
+    createFileInstantly: true
     fuzzyMatch: true
+    helmDirSwitch: true
   "atom-clock":
     dateFormat: "h:mm a"
   core:
     audioBeep: false
+    disabledPackages: [
+      "atom-clock"
+      "busy-signal"
+      "ethereum-status-bar"
+      "intentions"
+      "linter-write-good"
+      "package-sync"
+    ]
     telemetryConsent: "no"
     titleBar: "custom"
   docblockr:
+    auto_add_method_tag: true
     deep_indent: true
   editor:
+    fontFamily: "IBM 3270"
+    fontSize: 16
     invisibles: {}
     showIndentGuide: true
     showInvisibles: true
     softTabs: false
     softWrap: true
+    softWrapAtPreferredLineLength: true
     tabType: "soft"
   "exception-reporting":
     userId: "4b628db4-49fe-71ae-5a43-9bb697b639e9"
+  "file-icons":
+    onChanges: true
   "language-babel": {}
   "linter-ui-default":
     panelHeight: 69
+  "linter-write-good":
+    severityLevel: "Info"
   "one-dark-ui":
     tabSizing: "Even"
   "package-sync":
@@ -33,10 +51,10 @@
     prettierOptions:
       singleQuote: true
       trailingComma: "all"
+    useEslint: true
   react:
     enabledForAllJavascriptFiles: true
-  "tree-view":
-    squashDirectoryNames: true
+  "tree-view": {}
   "vim-mode-plus":
     clearMultipleCursorsOnEscapeInsertMode: true
   "vim-mode-plus-ex-mode":

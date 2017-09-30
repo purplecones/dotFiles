@@ -11,15 +11,23 @@
 #       """
 
 '.source.js':
-  'Import Modile':
+  'Import Module':
     'prefix': 'imp'
     'body': "import $1 from '$2';"
+  'Import Module':
+    'prefix': 'ipf'
+    'body': "import $1 from './$1';"
   'Styled Compoment':
     'prefix': 'sty'
     'body': """
       const $1 = styled.$2`
         $3
       `;
+      """
+  'Import Styled Compoment':
+    'prefix': 'ist'
+    'body': """
+      import styled from 'styled-components';
       """
   'Promise':
     'prefix': 'pro'
@@ -53,4 +61,30 @@
       }
 
       export default $1;
+    """
+  'Map State To Props (Redux)':
+    'prefix': 'mstp'
+    'body': """
+      const mapStateToProps = state => ({
+        $1
+      });
+    """
+  'Import PropTypes':
+    'prefix': 'ipt'
+    'body': """
+      import PropTypes from 'prop-types';
+    """
+  'PropTypes':
+    'prefix': 'prop'
+    'body': """
+      const propTypes = {
+        $1: PropTypes.$2,
+      };
+    """
+  'Default PropTypes':
+    'prefix': 'dprop'
+    'body': """
+      const defaultProps = {
+        $1: $2,
+      };
     """

@@ -19,13 +19,17 @@ module.exports = {
     backgroundColor: '#000',
 
     // border color (window, tabs)
-    borderColor: '#333',
+    borderColor: '#232323',
 
     // custom css to embed in the main window
-    css: '',
+    css: `
+      .hyper_main {
+        border-radius: 0;
+      }
+    `,
 
     // custom css to embed in the terminal window
-    termCSS: '',
+    termCSS: ``,
 
     // custom padding (css format, i.e.: `top right bottom left`)
     // padding: '12px 14px',
