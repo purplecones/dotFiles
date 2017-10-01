@@ -35,6 +35,7 @@
     userId: "4b628db4-49fe-71ae-5a43-9bb697b639e9"
   "file-icons":
     onChanges: true
+  "fuzzy-finder": {}
   "language-babel": {}
   "linter-ui-default":
     panelHeight: 69

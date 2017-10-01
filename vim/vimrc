@@ -298,5 +298,6 @@ nnoremap <C-H> <C-W><C-H>
 let g:diminactive_use_colorcolumn = 0
 let g:diminactive_use_syntax = 1
 let g:diminactive_enable_focus = 1
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
 set autoread
