@@ -15,6 +15,7 @@
       "intentions"
       "linter-write-good"
       "package-sync"
+      "autocomplete-snippets"
     ]
     telemetryConsent: "no"
     titleBar: "custom"

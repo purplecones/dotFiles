@@ -1,7 +1,6 @@
 'atom-text-editor.vim-mode-plus.normal-mode':
   'g f': 'open-this:here'
 
-
   ':': 'vim-mode-plus-ex-mode:open'
   '!': 'vim-mode-plus-ex-mode:toggle-setting'
 
