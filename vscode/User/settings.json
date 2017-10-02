@@ -1,0 +1,9 @@
+{
+    "vim.disableAnnoyingNeovimMessage": true,
+    "editor.tabSize": 2,
+    "workbench.colorTheme": "Default High Contrast",
+    "editor.minimap.enabled": false,
+    "workbench.startupEditor": "newUntitledFile",
+    "vim.easymotion": true,
+    "vim.ignorecase": false
+}

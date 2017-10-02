@@ -1,7 +1,5 @@
 brew install\
   nvm\
-  p7zip\
-  phantomjs\
   vim\
   yarn\
   docker\
