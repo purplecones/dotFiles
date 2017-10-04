@@ -1,9 +1,28 @@
 {
     "vim.disableAnnoyingNeovimMessage": true,
-    "editor.tabSize": 2,
-    "workbench.colorTheme": "Default High Contrast",
-    "editor.minimap.enabled": false,
-    "workbench.startupEditor": "newUntitledFile",
+    "vim.overrideCopy": false,
+    "vim.useSystemClipboard": true,
+    "vim.statusBarColorControl": true,
+    "vim.visualstar": true,
+    "vim.foldfix": true,
     "vim.easymotion": true,
-    "vim.ignorecase": false
+    "vim.ignorecase": false,
+    "editor.tabSize": 2,
+    "editor.minimap.enabled": false,
+    "editor.wordWrap": "on",
+    "editor.tabCompletion": true,
+    "editor.snippetSuggestions": "top",
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.colorTheme": "Monokai Dimmed",
+    "workbench.editor.showIcons": false,
+    "prettier.eslintIntegration": true,
+    "prettier.trailingComma": "all",
+    "files.associations": {
+        "*.js": "javascriptreact"
+    },
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/bower_components": true,
+        "**/.meteor/local": true
+    }
 }
