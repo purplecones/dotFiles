@@ -12,6 +12,11 @@
     "editor.wordWrap": "on",
     "editor.tabCompletion": true,
     "editor.snippetSuggestions": "top",
+    "editor.suggestOnTriggerCharacters": false,
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": false
+    },
     "workbench.iconTheme": "vscode-icons",
     "workbench.colorTheme": "Monokai Dimmed",
     "workbench.editor.showIcons": false,
