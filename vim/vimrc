@@ -279,11 +279,10 @@ let g:move_key_modifier = 'C'
 " mxw/vim-jsx : syntax highlighting for .js files
 let g:jsx_ext_required = 0
 
-" shinokada/dragvisuals.vim : move text blocks with Control and h, j, k, l
-vmap <expr> <C-h> DVB_Drag('left')
-vmap <expr> <C-l> DVB_Drag('right')
-vmap <expr> <C-j> DVB_Drag('down')
-vmap <expr> <C-k> DVB_Drag('up')
+vmap <unique> <C-h> <Plug>SchleppLeft
+vmap <unique> <C-l> <Plug>SchleppRight
+vmap <unique> <C-j> <Plug>SchleppDown
+vmap <unique> <C-k> <Plug>SchleppUp
 
 " scrooloose/nerdtree : toggle tree
 map <C-\> :NERDTreeToggle<CR>
@@ -375,4 +374,16 @@ let g:ale_sign_warning = '-'
 let g:NERDAltDelims_javascript = 1
 let g:NERDCustomDelimiters = { 'javascript': { 'left': '//', 'leftAlt': '{/*','rightAlt': '*/}' } }
 let g:NERDSpaceDelims = 1
+
+set nocursorcolumn
+set nocursorline
+set norelativenumber
+syntax sync minlines=256
+
+nnoremap gf <C-W>f
+vnoremap gf <C-W>f
+nnoremap vgf <C-W>vgf
+vnoremap vgf <C-W>vgf
+nnoremap gF <C-W>gf
+vnoremap gF <C-W>gf
 
