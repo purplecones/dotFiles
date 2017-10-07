@@ -357,6 +357,8 @@ let g:gitgutter_sign_modified = '~'
 let g:gitgutter_sign_removed = '-'
 let g:gitgutter_sign_removed_first_line = '-'
 let g:gitgutter_sign_modified_removed = '-'
+let g:gitgutter_realtime = 0
+let g:gitgutter_eager = 0
 if exists('&signcolumn')  " Vim 7.4.2201
   set signcolumn=yes
 else
@@ -368,3 +370,9 @@ highlight clear ALEErrorSign
 highlight clear ALEWarningSign
 let g:ale_sign_error = '>'
 let g:ale_sign_warning = '-'
+
+" better commenting for jsx
+let g:NERDAltDelims_javascript = 1
+let g:NERDCustomDelimiters = { 'javascript': { 'left': '//', 'leftAlt': '{/*','rightAlt': '*/}' } }
+let g:NERDSpaceDelims = 1
+
