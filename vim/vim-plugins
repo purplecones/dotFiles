@@ -20,6 +20,7 @@ Plugin 'Yggdroot/indentLine'
 Plugin 'MaxMEllon/vim-jsx-pretty'
 Plugin 'tomasiser/vim-code-dark'
 Plugin 'vim-scripts/AfterColors.vim'
+Plugin 'jparise/vim-graphql'
 
 " javascript
 Plugin 'pangloss/vim-javascript'

@@ -299,7 +299,7 @@ set autoread
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
 let g:prettier#config#bracket_spacing = 'true'
-let g:prettier#config#jsx_bracket_same_line = 'true'
+let g:prettier#config#jsx_bracket_same_line = 'false'
 
 " make YCM compatible with UltiSnips (using supertab)
 let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
