@@ -12,3 +12,7 @@ highlight NonText ctermbg=black
 highlight Question ctermbg=black
 highlight WarningMsg ctermbg=black
 highlight Conceal ctermbg=black
+highlight TabLineSel ctermfg=black ctermbg=white
+highlight TabLineFill ctermbg=black
+highlight TabLine ctermbg=black
+highlight Search ctermfg=black ctermbg=yellow

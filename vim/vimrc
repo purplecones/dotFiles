@@ -358,11 +358,6 @@ let g:gitgutter_sign_removed_first_line = '-'
 let g:gitgutter_sign_modified_removed = '-'
 let g:gitgutter_realtime = 0
 let g:gitgutter_eager = 0
-if exists('&signcolumn')  " Vim 7.4.2201
-  set signcolumn=yes
-else
-  let g:gitgutter_sign_column_always = 1
-endif
 
 " linter config
 highlight clear ALEErrorSign
@@ -375,15 +370,25 @@ let g:NERDAltDelims_javascript = 1
 let g:NERDCustomDelimiters = { 'javascript': { 'left': '//', 'leftAlt': '{/*','rightAlt': '*/}' } }
 let g:NERDSpaceDelims = 1
 
+" improve performance by removing line highlight
 set nocursorcolumn
 set nocursorline
 set norelativenumber
 syntax sync minlines=256
 
+" go to file
+" open split above
 nnoremap gf <C-W>f
-vnoremap gf <C-W>f
+" open split vertical
 nnoremap vgf <C-W>vgf
-vnoremap vgf <C-W>vgf
+" open in new tab
 nnoremap gF <C-W>gf
-vnoremap gF <C-W>gf
+
+" vim-tmux mappings
+let g:tmux_navigator_no_mappings = 1
+
+nnoremap <silent> <C-J> :TmuxNavigateDown<cr>
+nnoremap <silent> <C-K> :TmuxNavigateUp<cr>
+nnoremap <silent> <C-L> :TmuxNavigateRight<cr>
+nnoremap <silent> <C-H> :TmuxNavigateLeft<cr>
 
