@@ -288,10 +288,10 @@ vmap <unique> <C-k> <Plug>SchleppUp
 map <C-\> :NERDTreeToggle<CR>
 
 " split movements
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
+" nnoremap <C-J> <C-W><C-J>
+" nnoremap <C-K> <C-W><C-K>
+" nnoremap <C-L> <C-W><C-L>
+" nnoremap <C-H> <C-W><C-H>
 
 set autoread
 
@@ -392,3 +392,4 @@ nnoremap <silent> <C-K> :TmuxNavigateUp<cr>
 nnoremap <silent> <C-L> :TmuxNavigateRight<cr>
 nnoremap <silent> <C-H> :TmuxNavigateLeft<cr>
 
+let g:vim_json_syntax_conceal = 0

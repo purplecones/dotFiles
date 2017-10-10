@@ -24,12 +24,12 @@ Plugin 'MaxMEllon/vim-jsx-pretty'
 Plugin 'tomasiser/vim-code-dark'
 Plugin 'vim-scripts/AfterColors.vim'
 Plugin 'jparise/vim-graphql'
+Plugin 'elzr/vim-json'
 
 " javascript
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 
-" Plugin 'leshill/vim-json'
 " Plugin 'ervandew/supertab'
 " Plugin 'isruslan/vim-es6'
 " Plugin 'vim-syntastic/syntastic'
