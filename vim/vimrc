@@ -377,9 +377,9 @@ set norelativenumber
 syntax sync minlines=256
 
 " go to file
-" open split above
-nnoremap gf <C-W>f
-" open split vertical
+" open with horizontal split
+nnoremap hgf <C-W>f
+" open with veritcal split
 nnoremap vgf <C-W>vgf
 " open in new tab
 nnoremap gF <C-W>gf
