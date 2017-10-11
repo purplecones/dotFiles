@@ -393,3 +393,9 @@ nnoremap <silent> <C-L> :TmuxNavigateRight<cr>
 nnoremap <silent> <C-H> :TmuxNavigateLeft<cr>
 
 let g:vim_json_syntax_conceal = 0
+map <C-T> :tabnew<CR>
+
+let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
+if executable('ag')
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+endif
