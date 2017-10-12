@@ -1,319 +1,112 @@
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => GENERAL
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Enables Plugins, File Indention detection and Filetype detection
-filetype plugin indent on
+packadd minpac
+call minpac#init()
 
-" Necessary for lots of cool vim things
+" feature
+call minpac#add('tpope/vim-surround')
+call minpac#add('tpope/vim-fugitive')
+call minpac#add('airblade/vim-gitgutter')
+call minpac#add('scrooloose/nerdtree')
+call minpac#add('kien/ctrlp.vim')
+call minpac#add('mattn/emmet-vim')
+call minpac#add('SirVer/ultisnips')
+call minpac#add('zirrostig/vim-schlepp')
+call minpac#add('prettier/vim-prettier')
+call minpac#add('scrooloose/nerdcommenter')
+call minpac#add('jiangmiao/auto-pairs')
+call minpac#add('Valloric/YouCompleteMe')
+call minpac#add('w0rp/ale')
+call minpac#add('terryma/vim-multiple-cursors')
+call minpac#add('christoomey/vim-tmux-navigator')
+call minpac#add('christoomey/vim-sort-motion')
+call minpac#add('tommcdo/vim-lion')
+
+" visual
+call minpac#add('vim-airline/vim-airline')
+call minpac#add('Yggdroot/indentLine')
+call minpac#add('MaxMEllon/vim-jsx-pretty')
+call minpac#add('vim-scripts/AfterColors.vim')
+call minpac#add('tomasiser/vim-code-dark')
+call minpac#add('jparise/vim-graphql')
+call minpac#add('elzr/vim-json')
+
+" javascript
+call minpac#add('pangloss/vim-javascript')
+call minpac#add('mxw/vim-jsx')
+
+let mapleader = "\<Space>"
+let &t_Co=256
+map <leader>h :nohlsearch<cr>
+map hgf <C-W>f
+map vgf <C-W>vgf
+map gF <C-W>gf
+map <C-T> :tabnew<CR>
 set nocompatible
-
-" Show number column
 set number
-
-" Make backspace work like most other apps
 set backspace=2
-
-" Enables CSS auto-completion
-set omnifunc=csscomplete#CompleteCSS
-
-" Sets your path variable to current directory
-"set path=$PWD/**
-set path=.,**
-
-" Allows pastetoggle to work in Insert mode
-set pastetoggle=<F2>
-
-" Set to auto read when a file is changed from the outside
-set autoread
-
-" Always show current position
-set ruler
-
-" Set update delay to 250ms
-set updatetime=250
-
-" Set ctags location
-set tags=./.git/tags
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => SEARCHING - help from http://amix.dk/vim/vimrc.html
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Ignore case when searching
-set ignorecase
-
-" When searching try to be smart about cases
-set smartcase
-
-" Makes search act like search in modern browsers
-set incsearch
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => TEXT, TAB & INDENT
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Use spaces insted of tabs
-set expandtab
-
-" Be smart when using tabs
-set	smarttab
-
-" 1 Tab == 4spaces
 set tabstop=2
 set shiftwidth=2
-
-" Turns on auto-indentation
-set ai
-
-" does the right thing (mostly) in programs
+set expandtab
+set smarttab
 set smartindent
-
-" highlight on the line your cursor is currently on.
-set cursorline
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => COLORS & FONTS
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Enable syntax highlighting
-syntax on
-
-" Set colorscheme
-" set background=dark
-" colorscheme wombat256mod
-
-" Set utf8 as standard encoding
+set ai
+set ignorecase
+set smartcase
+set incsearch
 set encoding=utf8
-"set guifont=Inconsolata\ for\ Powerline\ Nerd\ Font\ Complete\ Mono\ 11
-"set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete\ 12
-
-" Get 256 Colors
-let &t_Co=256
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => MAPPINGS
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" <LEADER>
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let mapleader = "\<Space>"
-
-" Edit and auto-update this config file and plugins
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nmap <silent>  ;v  :tabnew $VIMRC<CR>
-
-" Quickfix for TO-DOs and FIX-MEs
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nmap <Leader>t :Ag \(TODO\\|FIXME\) themes/<CR>
-
-" Find/Edit/Buffers Shortcuts
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-noremap <Leader>f :find
-noremap <Leader>e :edit
-noremap <Leader>B :buffers<CR>
-noremap <Leader>b :buffer
-
-" Insert Line Above/Below
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nmap <Leader>o o<Esc>k
-nmap <Leader>O O<Esc>j
-
-" Highlight Current Line
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nmap <Leader><Leader> V
-
-" Dev Debug Snippets
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nmap <Leader>pr vavyopr<Tab><Space><Esc>p
-nmap <Leader>ppr vavyoppr<Tab><Space><Esc>p
-
-" Quick Fix Window Config
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <Home> :cp<CR>
-nnoremap <End>  :cn<CR>
-nnoremap <bar>  :ccl<CR>
-
-" Insert newline stay in NORMAL mode
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nmap <S-Enter> O<Esc>
-nmap <CR> O<Esc>
-
-" Map jk kj to Esc key
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-inoremap jk <esc>
-inoremap kj <esc>
-
-" Write/Quit Shortcuts
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-cmap W w
-cmap Q q
-noremap <Leader>w :w<CR>
-noremap <Leader>q :q<CR>
-noremap <Leader>wq :wq<CR>
-
-" move vertically by visual line  -- won't skip over wrapped lines
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap j gj
-nnoremap k gk
-
-" move to beginning/end of line
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap B ^
-nnoremap E $
-
-" Shift to move 5 spaces
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nmap H 5h
-xmap H 5h
-nmap J 5j
-xmap J 5j
-nmap K 5k
-xmap K 5k
-nmap L 5l
-xmap L 5l
-
-" Move in Insert Mode
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-imap <C-h> <C-o>h
-imap <C-j> <C-o>j
-imap <C-k> <C-o>k
-imap <C-l> <C-o>l
-
-" <Leader>r - Redraw Screen
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nmap <Leader>r :redraw!<CR>
-
-" <Leader>% - Search and Replace Highlighted Text
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-vnoremap <Leader>% "hy:%s/<C-r>h//gc<left><left><left>
-
-" <Ctrl>s - Save while in Insert Mode
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-inoremap <C-s> <c-o>:w<CR>
-
-" ctags - Open definition in new tab
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Open definition in new tab
-map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => F KEYS
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Build current site assets
-noremap <F1> :!./build-assets<CR>
-
-" Toggle paste mode
-noremap <F2> :set invpaste paste?<CR>
-
-" Toggle line numbers
-noremap <F3> :set nonumber!<CR>
-
-" Add CSS closing comment
-noremap <F4>  %^y$%a//
-" bind-key -n C-S-Up resize-pane -U 15
-" bind-key -n C-S-Down resize-pane -D 15
-" source current file
-noremap <F5> :source %<CR>
-
-" Converts echo to `fwrite( $stdout )`
-noremap <F6> ^dwifwrite( $stdout, <Esc>$i )<Esc>
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => FILES, BACKUPS & UNDO
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Turn backups off
 set nobackup
 set noswapfile
 set nowb
-
-"  Sets undo history size
 set history=1000
+set hlsearch
+set timeoutlen=1000 ttimeoutlen=0
+set clipboard=unnamed
+set nocursorcolumn
+set nocursorline
+set norelativenumber
+filetype indent on
+filetype plugin on
+syntax sync minlines=256
+syntax on
 
-" Persistent UNDO
-if exists("&undodir")
-	set undofile                " Save undo's after file closes
-	set undodir=~/.vim/undo     " where to save undo histories
-	set undolevels=1000         " How many undos
-	set undoreload=10000        " number of lines to save for undo
-endif
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => AUTOCOMMANDS
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" Save folds
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-au BufWinLeave * silent! mkview
-au BufWinEnter * silent! loadview
-
-" Redraw screen on save
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-au BufWritePost * :redraw!
-
-" Set Filetypes
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-au BufRead,BufNewFile *.md set filetype=markdown syntax=markdown
-au BufRead,BufNewFile *.markdown set filetype=markdown syntax=markdown
-au BufNewFile,BufRead *.less set filetype=less syntax=less
-au BufRead,BufNewFile *.js set ft=javascript syntax=javascript
-au BufRead,BufNewFile *.json set ft=json syntax=javascript
-au BufRead,BufNewFile *.jade set ft=jade syntax=jade
-au BufRead,BufNewFile *.go set ft=go syntax=go
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => PLUGINS
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Vundle
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-  Plugin 'VundleVim/Vundle.vim'
-	source ~/.vim-plugins
-call vundle#end()
-" bind-key -n C-S-Right resize-pane -R 25
-
-let g:move_key_modifier = 'C'
-
-" mxw/vim-jsx : syntax highlighting for .js files
+" mxw/vim-jsx
 let g:jsx_ext_required = 0
 
+" zirrostig/vim-schlepp
 vmap <unique> <C-h> <Plug>SchleppLeft
 vmap <unique> <C-l> <Plug>SchleppRight
 vmap <unique> <C-j> <Plug>SchleppDown
 vmap <unique> <C-k> <Plug>SchleppUp
 
-" scrooloose/nerdtree : toggle tree
+" scrooloose/nerdtree
 map <C-\> :NERDTreeToggle<CR>
 
-" split movements
-" nnoremap <C-J> <C-W><C-J>
-" nnoremap <C-K> <C-W><C-K>
-" nnoremap <C-L> <C-W><C-L>
-" nnoremap <C-H> <C-W><C-H>
-
-set autoread
-
+" kien/ctrlp.vim
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
+if executable('ag')
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+endif
 
+" prettier/vim-prettier
 let g:prettier#config#bracket_spacing = 'true'
 let g:prettier#config#jsx_bracket_same_line = 'false'
 
-" make YCM compatible with UltiSnips (using supertab)
+" terryma/vim-multiple-cursors
 let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
-let g:SuperTabDefaultCompletionType = '<C-n>'
 
-" better key bindings for UltiSnipsExpandTrigger
+" SirVer/ultisnips
 let g:UltiSnipsExpandTrigger = "<tab>"
 let g:UltiSnipsJumpForwardTrigger = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+let g:UltiSnipsSnippetDirectories=["UltiSnips", "my_snippets"]
 
-" custom directory for snippets
-let g:UltiSnipsSnippetDirectories=["UltiSnips", "mySnippets"]
-
-" change cursor to line when in insert mode
+" christoomey/vim-tmux-navigator
+let g:tmux_navigator_no_mappings = 1
+nnoremap <silent> <C-J> :TmuxNavigateDown<cr>
+nnoremap <silent> <C-K> :TmuxNavigateUp<cr>
+nnoremap <silent> <C-L> :TmuxNavigateRight<cr>
+nnoremap <silent> <C-H> :TmuxNavigateLeft<cr>
 if exists('$TMUX')
   let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
   let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
@@ -322,35 +115,26 @@ else
   let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 endif
 
-" no delay on insert -> normal mode change
-autocmd InsertEnter * set cul
-autocmd InsertLeave * set nocul
-set timeoutlen=1000 ttimeoutlen=0
-
+" w0rp/ale
 let g:ale_completion_enabled = 1
 let g:ale_sign_column_always = 1
 let g:ale_linters = {
 \   'javascript': ['eslint'],
 \}
-
-" After this is configured, :ALEFix will try and fix your JS code with ESLint.
 let g:ale_fixers = {
 \   'javascript': ['eslint'],
 \}
+let g:ale_sign_error = '>'
+let g:ale_sign_warning = '-'
+highlight clear ALEErrorSign
+highlight clear ALEWarningSign
 
-set hlsearch
-map <leader>h :nohlsearch<cr>
-
-" use system clipboard
-set clipboard=unnamed
-
-" theme
-colorscheme codedark
+" vim-airline/vim-airline
 let g:airline_theme = 'codedark'
 
-" git gutter customizations
-highlight SignColumn ctermbg=black " terminal Vim
-let g:gitgutter_override_sign_column_highlight = 0
+" airblade/vim-gitgutter
+" highlight SignColumn ctermbg=black
+" let g:gitgutter_override_sign_column_highlight = 0
 let g:gitgutter_sign_added = '+'
 let g:gitgutter_sign_modified = '~'
 let g:gitgutter_sign_removed = '-'
@@ -359,43 +143,10 @@ let g:gitgutter_sign_modified_removed = '-'
 let g:gitgutter_realtime = 0
 let g:gitgutter_eager = 0
 
-" linter config
-highlight clear ALEErrorSign
-highlight clear ALEWarningSign
-let g:ale_sign_error = '>'
-let g:ale_sign_warning = '-'
-
-" better commenting for jsx
+" scrooloose/nerdcommenter
 let g:NERDAltDelims_javascript = 1
 let g:NERDCustomDelimiters = { 'javascript': { 'left': '//', 'leftAlt': '{/*','rightAlt': '*/}' } }
 let g:NERDSpaceDelims = 1
 
-" improve performance by removing line highlight
-set nocursorcolumn
-set nocursorline
-set norelativenumber
-syntax sync minlines=256
-
-" go to file
-" open with horizontal split
-nnoremap hgf <C-W>f
-" open with veritcal split
-nnoremap vgf <C-W>vgf
-" open in new tab
-nnoremap gF <C-W>gf
-
-" vim-tmux mappings
-let g:tmux_navigator_no_mappings = 1
-
-nnoremap <silent> <C-J> :TmuxNavigateDown<cr>
-nnoremap <silent> <C-K> :TmuxNavigateUp<cr>
-nnoremap <silent> <C-L> :TmuxNavigateRight<cr>
-nnoremap <silent> <C-H> :TmuxNavigateLeft<cr>
-
+" elzr/vim-json
 let g:vim_json_syntax_conceal = 0
-map <C-T> :tabnew<CR>
-
-let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
-if executable('ag')
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-endif
