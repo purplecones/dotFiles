@@ -37,8 +37,8 @@ colorscheme codedark
 
 let mapleader = "\<Space>"
 let &t_Co=256
-map <leader>h :nohlsearch<cr>
-map hgf <C-W>f
+map <leader>h :nohlsearch<CR>
+map sgf <C-W>f
 map vgf <C-W>vgf
 map gF <C-W>gf
 map <C-T> :tabnew<CR>
@@ -69,7 +69,6 @@ filetype indent on
 filetype plugin on
 syntax sync minlines=256
 syntax on
-" autocmd VimEnter * FindFileCache .
 
 " mxw/vim-jsx
 let g:jsx_ext_required = 0

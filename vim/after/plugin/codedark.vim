@@ -1,4 +1,3 @@
-highlight SignColumn ctermbg=black
 highlight Normal ctermbg=black
 highlight Directory ctermbg=black
 highlight EndOfBuffer ctermbg=black
