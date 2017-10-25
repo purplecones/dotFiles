@@ -14,14 +14,13 @@ call minpac#add('prettier/vim-prettier')
 call minpac#add('scrooloose/nerdcommenter')
 call minpac#add('jiangmiao/auto-pairs')
 call minpac#add('Valloric/YouCompleteMe')
-" call minpac#add('w0rp/ale')
+call minpac#add('w0rp/ale')
 call minpac#add('terryma/vim-multiple-cursors')
 call minpac#add('christoomey/vim-tmux-navigator')
 call minpac#add('christoomey/vim-sort-motion')
 
 " visual
 call minpac#add('vim-airline/vim-airline')
-call minpac#add('vim-airline/vim-airline-themes')
 call minpac#add('ap/vim-css-color')
 call minpac#add('Yggdroot/indentLine')
 call minpac#add('MaxMEllon/vim-jsx-pretty')
@@ -38,7 +37,7 @@ colorscheme codedark
 
 let mapleader = "\<Space>"
 let &t_Co=256
-map <leader>h :nohlsearch<CR>
+map <leader>h :noh<CR>
 map sgf <C-W>f
 map vgf <C-W>vgf
 map gF <C-W>gf
@@ -128,8 +127,12 @@ highlight clear ALEErrorSign
 highlight clear ALEWarningSign
 
 " vim-airline/vim-airline
-" let g:airline_theme = 'simple'
-let g:airline_extensions = []
+let g:airline#extensions#whitespace#enabled = 0
+let g:airline#extensions#tabline#fnamemod = ':t'
+let g:airline_section_b = ''
+let g:airline_section_x = ''
+let g:airline_section_y = ''
+let g:airline_section_z = ''
 
 " airblade/vim-gitgutter
 highlight SignColumn ctermbg=black

@@ -14,14 +14,15 @@ highlight TabLineSel ctermfg=black ctermbg=white
 highlight TabLineFill ctermbg=black
 highlight TabLine ctermbg=black
 highlight Search ctermfg=black ctermbg=yellow
-highlight VertSplit ctermfg=white ctermbg=240
+highlight VertSplit ctermfg=white ctermbg=232
 set fillchars+=vert:\ 
 
 let g:airline#themes#purplecones#palette = {}
 
 let s:N1   = [ '#00005f' , '#dfff00' , 17, 190 ]
-let s:N2   = [ '#ffffff' , '#444444' , 0 , 15 ]
+let s:N2   = [ '#ffffff' , '#444444' , 15 , 233 ]
 let g:airline#themes#purplecones#palette.normal = airline#themes#generate_color_map(s:N1, s:N2, s:N2)
+
 
 let g:airline#themes#purplecones#palette.normal_modified = {
   \ 'airline_b': [ '#ffffff' , '#5f005f' , 15 , 88     , ''     ] ,
@@ -48,11 +49,11 @@ let g:airline#themes#purplecones#palette.visual_modified = {
   \ 'airline_c': [ '#ffffff' , '#5f005f' , 255     , 53      , ''     ] ,
 \ }
 
-let s:IA1 = [ '#4e4e4e' , '#1c1c1c' , 250 , 240 , '' ]
-let s:IA2 = [ '#4e4e4e' , '#262626' , 250 , 240 , '' ]
+let s:IA1 = [ '#4e4e4e' , '#1c1c1c' , 245 , 232 , '' ]
+let s:IA2 = [ '#4e4e4e' , '#262626' , 245 , 232 , '' ]
 let g:airline#themes#purplecones#palette.inactive = airline#themes#generate_color_map(s:IA1, s:IA2, s:IA2)
 let g:airline#themes#purplecones#palette.inactive_modified = {
-  \ 'airline_c': [ '#875faf' , '' , 97 , '' , '' ] ,
+  \ 'airline_c': [ '#875faf' , '' , 52 , '' , '' ] ,
 \ }
 
 let g:airline#themes#purplecones#palette.accents = {
