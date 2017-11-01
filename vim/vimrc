@@ -66,14 +66,13 @@ syntax sync minlines=256
 syntax on
 let mapleader = "\<Space>"
 let &t_Co=256
+nnoremap <C-e> <C-w>
 map <leader>h :noh<CR>
-map sgf <C-W>f
-map vgf <C-W>vgf
-map gF <C-W>gf
+map sgf <C-e>f
+map vgf <C-e>vgf
+map gF <C-e>gf
 map <C-t> :tabnew<CR>
 map <C-w> :q<CR>
-map <C-]> gt
-map <C-[> gT
 
 " mxw/vim-jsx
 let g:jsx_ext_required = 0
@@ -155,4 +154,8 @@ let g:NERDSpaceDelims = 1
 
 " elzr/vim-json
 let g:vim_json_syntax_conceal = 0
+
+" Yggdroot/indentLine
+let g:indentLine_setColors = 0
+let g:indentLine_char = ' '
 
