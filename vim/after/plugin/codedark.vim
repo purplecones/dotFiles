@@ -15,6 +15,8 @@ highlight TabLineFill ctermbg=black
 highlight TabLine ctermbg=black
 highlight Search ctermfg=black ctermbg=yellow
 highlight VertSplit ctermfg=white ctermbg=232
+highlight Conceal ctermfg=white ctermbg=233
+
 set fillchars+=vert:\ 
 
 let g:airline#themes#purplecones#palette = {}
