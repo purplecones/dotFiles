@@ -35,13 +35,6 @@ call minpac#add('mxw/vim-jsx')
 " theme
 colorscheme codedark
 
-let mapleader = "\<Space>"
-let &t_Co=256
-map <leader>h :noh<CR>
-map sgf <C-W>f
-map vgf <C-W>vgf
-map gF <C-W>gf
-map <C-T> :tabnew<CR>
 set nocompatible
 set number
 set backspace=2
@@ -71,6 +64,16 @@ filetype indent on
 filetype plugin on
 syntax sync minlines=256
 syntax on
+let mapleader = "\<Space>"
+let &t_Co=256
+map <leader>h :noh<CR>
+map sgf <C-W>f
+map vgf <C-W>vgf
+map gF <C-W>gf
+map <C-t> :tabnew<CR>
+map <C-w> :q<CR>
+map <C-]> gt
+map <C-[> gT
 
 " mxw/vim-jsx
 let g:jsx_ext_required = 0
