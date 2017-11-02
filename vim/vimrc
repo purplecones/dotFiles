@@ -73,8 +73,8 @@ map vgf <C-e>vgf
 map gF <C-e>gf
 map <C-t> :tabnew<CR>
 map <C-w> :q<CR>
-nmap <M-k> gt
-nmap <M-j> gT
+nmap <C-M-k> gt
+nmap <C-M-j> gT
 
 " mxw/vim-jsx
 let g:jsx_ext_required = 0
