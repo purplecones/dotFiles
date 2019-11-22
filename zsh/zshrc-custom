@@ -1,5 +1,7 @@
 # env
 export EDITOR=vim
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+source $HOME/.cargo/env
 
 # aliases
 ## git
@@ -8,6 +10,7 @@ alias gs='git status'
 alias ga='git add'
 alias gc='git commit'
 alias gp='git push'
+alias gt='git log --graph --oneline --all'
 
 ## yarn
 alias y='yarn'
@@ -20,3 +23,5 @@ alias n='npm'
 ## serverless
 alias s='serverless'
 
+## docker-compose
+alias dc='docker-compose'

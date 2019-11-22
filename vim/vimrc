@@ -6,31 +6,51 @@ call minpac#add('tpope/vim-surround')
 call minpac#add('tpope/vim-fugitive')
 call minpac#add('airblade/vim-gitgutter')
 call minpac#add('scrooloose/nerdtree')
+call minpac#add('Xuyuanp/nerdtree-git-plugin')
 call minpac#add('kien/ctrlp.vim')
 call minpac#add('mattn/emmet-vim')
-call minpac#add('SirVer/ultisnips')
+" call minpac#add('SirVer/ultisnips')
 call minpac#add('zirrostig/vim-schlepp')
 call minpac#add('prettier/vim-prettier')
 call minpac#add('scrooloose/nerdcommenter')
 call minpac#add('jiangmiao/auto-pairs')
-call minpac#add('Valloric/YouCompleteMe')
+" call minpac#add('Valloric/YouCompleteMe')
 call minpac#add('w0rp/ale')
 call minpac#add('terryma/vim-multiple-cursors')
 call minpac#add('christoomey/vim-tmux-navigator')
-call minpac#add('christoomey/vim-sort-motion')
+" call minpac#add('christoomey/vim-sort-motion')
+" call minpac#add('jremmen/vim-ripgrep')
+call minpac#add('neoclide/coc.nvim', {'do': 'yarn install'})
+" call minpac#add('zxqfl/tabnine-vim')
+" call minpac#add('lifepillar/vim-mucomplete')
 
 " visual
-call minpac#add('vim-airline/vim-airline')
-call minpac#add('ap/vim-css-color')
-call minpac#add('Yggdroot/indentLine')
-call minpac#add('MaxMEllon/vim-jsx-pretty')
+" call minpac#add('vim-airline/vim-airline')
+" call minpac#add('ap/vim-css-color')
+" call minpac#add('Yggdroot/indentLine')
+" call minpac#add('MaxMEllon/vim-jsx-pretty')
 call minpac#add('tomasiser/vim-code-dark')
 call minpac#add('jparise/vim-graphql')
-call minpac#add('elzr/vim-json')
+" call minpac#add('elzr/vim-json')
+" call minpac#add('tomlion/vim-solidity')
+call minpac#add('styled-components/vim-styled-components')
 
 " javascript
 call minpac#add('pangloss/vim-javascript')
 call minpac#add('mxw/vim-jsx')
+" call minpac#add('rust-lang/rust.vim')
+
+" typesript
+call minpac#add('leafgarland/typescript-vim')
+call minpac#add('Quramy/tsuquyomi')
+
+" set completeopt+=menuone
+" set completeopt+=noselect
+" set shortmess+=c   " Shut off completion messages
+" set belloff+=ctrlg " If Vim beeps during completion
+" let g:mucomplete#enable_auto_at_startup = 1
+
+" autocmd BufEnter * silent! lcd %:p:h
 
 " theme
 colorscheme codedark
@@ -60,30 +80,38 @@ set nocursorline
 set norelativenumber
 set lazyredraw
 set ttyfast
+
+" refresh file on change
+set autoread
+autocmd CursorHold * call Timer()
+function! Timer()
+" checktime
+" call feedkeys("f\e")
+endfunction
+
 filetype indent on
 filetype plugin on
 syntax sync minlines=256
 syntax on
 let mapleader = "\<Space>"
 let &t_Co=256
-nnoremap <C-e> <C-w>
 map <leader>h :noh<CR>
 map sgf <C-e>f
 map vgf <C-e>vgf
 map gF <C-e>gf
 map <C-t> :tabnew<CR>
 map <C-w> :q<CR>
-nmap <C-M-k> gt
-nmap <C-M-j> gT
+nnoremap <C-,> :tabprevious<CR>
+nnoremap <C-.> :tabnext<CR>
 
 " mxw/vim-jsx
 let g:jsx_ext_required = 0
 
 " zirrostig/vim-schlepp
-vmap <unique> <C-h> <Plug>SchleppLeft
-vmap <unique> <C-l> <Plug>SchleppRight
-vmap <unique> <C-j> <Plug>SchleppDown
-vmap <unique> <C-k> <Plug>SchleppUp
+vmap <C-h> <Plug>SchleppLeft
+vmap <C-l> <Plug>SchleppRight
+vmap <C-j> <Plug>SchleppDown
+vmap <C-k> <Plug>SchleppUp
 
 " scrooloose/nerdtree
 map <C-\> :NERDTreeToggle<CR>
@@ -92,16 +120,18 @@ map <C-\> :NERDTreeToggle<CR>
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|.git|.meteor'
 let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
 if executable('ag')
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+" let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 endif
 
 " prettier/vim-prettier
 let g:prettier#config#bracket_spacing = 'true'
 let g:prettier#config#jsx_bracket_same_line = 'false'
+let g:prettier#config#print_width = 80
 
-" terryma/vim-multiple-cursors
-let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
-let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+" YCM
+let g:ycm_key_list_select_completion = ['<C-j>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-k>', '<Up>']
+" let g:ycm_server_python_interpreter = 'usr/local/bin/python3'
 
 " SirVer/ultisnips
 let g:UltiSnipsExpandTrigger = "<tab>"
@@ -117,26 +147,31 @@ nnoremap <silent> <C-L> :TmuxNavigateRight<cr>
 nnoremap <silent> <C-H> :TmuxNavigateLeft<cr>
 
 " w0rp/ale
-let g:ale_completion_enabled = 1
-let g:ale_sign_column_always = 1
+map <leader>p :ALEFix<CR>
+" let g:ale_completion_enabled = 1
+" let g:ale_sign_column_always = 1
 let g:ale_linters = {
 \   'javascript': ['eslint'],
+\   'json': ['eslint'],
+\   'typescript': ['eslint'],
 \}
 let g:ale_fixers = {
-\   'javascript': ['eslint'],
+\   'javascript': ['prettier', 'eslint'],
+\   'json': ['prettier', 'eslint'],
+\   'typescript': ['prettier', 'eslint'],
 \}
-let g:ale_sign_error = '>'
-let g:ale_sign_warning = '-'
-highlight clear ALEErrorSign
-highlight clear ALEWarningSign
+" let g:ale_sign_error = '>'
+" let g:ale_sign_warning = '-'
+" highlight clear ALEErrorSign
+" highlight clear ALEWarningSign
 
 " vim-airline/vim-airline
-let g:airline#extensions#whitespace#enabled = 0
-let g:airline#extensions#tabline#fnamemod = ':t'
-let g:airline_section_b = ''
-let g:airline_section_x = ''
-let g:airline_section_y = ''
-let g:airline_section_z = ''
+" let g:airline#extensions#whitespace#enabled = 0
+" let g:airline#extensions#tabline#fnamemod = ':t'
+" let g:airline_section_b = ''
+" let g:airline_section_x = ''
+" let g:airline_section_y = ''
+" let g:airline_section_z = ''
 
 " airblade/vim-gitgutter
 highlight SignColumn ctermbg=black
@@ -153,6 +188,8 @@ let g:gitgutter_eager = 0
 let g:NERDAltDelims_javascript = 1
 let g:NERDCustomDelimiters = { 'javascript': { 'left': '//', 'leftAlt': '{/*','rightAlt': '*/}' } }
 let g:NERDSpaceDelims = 1
+set wildignore+=*.pyc,*.o,*.obj,*.svn,*.swp,*.class,*.hg,*.DS_Store,*.min.*
+let NERDTreeRespectWildIgnore=1
 
 " elzr/vim-json
 let g:vim_json_syntax_conceal = 0
@@ -160,4 +197,22 @@ let g:vim_json_syntax_conceal = 0
 " Yggdroot/indentLine
 let g:indentLine_setColors = 0
 let g:indentLine_char = ' '
+
+" Undo history across sessions
+" Put plugins and dictionaries in this dir (also on Windows)
+let vimDir = '$HOME/.vim'
+let &runtimepath.=','.vimDir
+
+" Keep undo history across sessions by storing it in a file
+if has('persistent_undo')
+" let myUndoDir = expand(vimDir . '/undodir')
+" " Create dirs
+" call system('mkdir ' . vimDir)
+" call system('mkdir ' . myUndoDir)
+" let &undodir = myUndoDir
+" set undofile
+endif
+
+" html syntax highlighting for .ejs files
+au BufNewFile,BufRead *.ejs set filetype=html
 
