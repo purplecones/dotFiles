@@ -5,7 +5,9 @@ brew install\
   nvm\
   docker\
   tmux\
-  docker-compose
+  docker-compose\
+  cmake\
+  macvim
 
 brew cask install\
   google-chrome\
