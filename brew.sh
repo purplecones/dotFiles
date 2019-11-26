@@ -1,14 +1,6 @@
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew update
 
-brew install\
-  nvm\
-  docker\
-  tmux\
-  docker-compose\
-  cmake\
-  macvim
-
 brew cask install\
   google-chrome\
   brave-browser\
@@ -17,5 +9,18 @@ brew cask install\
   visual-studio-code\
   iterm2\
   teamviewer\
+  vagrant-manager\
+  adoptopenjdk\
   virtualbox
+
+brew install\
+  nvm\
+  docker\
+  tmux\
+  docker-compose\
+  cmake\
+  python\
+  mvn\
+  macvim
+
 
